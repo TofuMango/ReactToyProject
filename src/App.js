@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Hello from "./component/Hello";
+import Welcome from "./component/welcome";
 
 function App() {
-  return (
+    const name = "dubu";
+    const snslab = {name: "snslab", url: "http://snslab.cu.ac.kr"}
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1 style={{color : "blue", backgroundColor : "gray"}}>hello, {snslab.name}.{snslab.url}</h1>
+        <a href={snslab.name}>{snslab.url}</a>
+        <Hello/>
+        <Hello/>
+        <Hello/>
+        <Welcome/>
     </div>
   );
 }
+
+
 
 export default App;
